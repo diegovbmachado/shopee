@@ -1,0 +1,16 @@
+[
+  {
+    "id": "HLxJbuUPG3yKD9b85sVv",
+    "type": "expense",
+    "date": "2025-05-21",
+    "money": {
+      "currency": "BRL",
+      "value": 3000
+    },
+    "transactionType": "Salário",
+    "description": "nao trabalho nem sabado e domingo",
+    "user": {
+      "uid": "5sJFObihU2ZudfNOkTEhPNdJx9e2"
+    }
+  }
+]

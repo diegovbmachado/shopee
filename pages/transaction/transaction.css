@@ -1,0 +1,160 @@
+main {
+  height: 100vh;
+}
+
+/* transaction.css */
+
+body {
+  background: linear-gradient(135deg, #8a05be, #5c0ca3);
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  margin: 0;
+  color: white;
+  /* Remover essas linhas abaixo */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* Centralizar apenas o conteúdo principal */
+main.centralize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Mantém centralização vertical */
+  padding: 60px 20px 20px;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 320px;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgb(0, 0, 0);
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: #e0d9ea;
+}
+
+input:focus,
+select:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 2px #ffffff40;
+}
+
+.error {
+  font-size: 12px;
+  color: #ffd6d6;
+  margin-top: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button.solid {
+  background: white;
+  color: #8a05be;
+}
+
+button.solid:hover {
+  background-color: #f8f1fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button.clear {
+  background-color: transparent;
+  color: #e0d9ea;
+}
+
+button.clear:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+button.outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+button.outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Estilo dos botões de adicionar/remover categoria */
+.inline-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.inline-input-group input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.inline-input-group button {
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: white;
+  color: #8a05be;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  margin-top: 5px;
+}
+
+.inline-input-group button:hover {
+  background-color: #f8f1fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  display: none;
+}
+
+.hidden {
+  display: none;
+}

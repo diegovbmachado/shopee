@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Controle de gastos</title>
+    <link rel="stylesheet" href="../../global.css" />
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body>
+    <header>
+      <button type="button" class="clear" onclick="logout()">Sair</button>
+    </header>
+
+    <!-- Filtro de mês e ano centralizado -->
+    <div class="centralize">
+      <form style="max-width: 300px; width: 100%">
+        <div class="form-field">
+          <label for="mes">Mês:</label>
+          <select id="mes">
+            <option value="01">Janeiro</option>
+            <option value="02">Fevereiro</option>
+            <option value="03">Março</option>
+            <option value="04">Abril</option>
+            <option value="05">Maio</option>
+            <option value="06">Junho</option>
+            <option value="07">Julho</option>
+            <option value="08">Agosto</option>
+            <option value="09">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="ano">Ano:</label>
+          <select id="ano">
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025" selected>2025</option>
+          </select>
+        </div>
+
+        <div>
+          <button
+            type="button"
+            class="solid"
+            onclick="atualizarTransacoesPorFiltro()"
+          >
+            Filtrar
+          </button>
+        </div>
+      </form>
+    </div>
+    <div id="grafico-legend" style="margin-bottom: 16px"></div>
+
+    <!-- Gráfico de Pizza -->
+    <div style="max-width: 500px; margin: 20px auto">
+      <canvas id="graficoPizza"></canvas>
+    </div>
+    <div id="resumo-total" style="margin-top: 20px; font-size: 18px;">
+  <p><strong>Total de Receitas:</strong> <span id="total-income">R$ 0,00</span></p>
+  <p><strong>Total de Despesas:</strong> <span id="total-expense">R$ 0,00</span></p>
+  <p><strong>Saldo:</strong> <span id="saldo-total">R$ 0,00</span></p>
+</div>
+    <ol id="transactions"></ol>
+    <button class="fab fixed bottom right" onclick="newTransaction()">+</button>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+    <script src="../../firebase-init.js"></script>
+
+    <script src="../../auth-guard.js"></script>
+    <script src="../../loading.js"></script>
+    <script src="../../services/transaction.service.js"></script>
+    <script src="home.js"></script>
+  </body>
+</html>

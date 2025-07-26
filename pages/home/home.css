@@ -1,0 +1,102 @@
+body {
+  background: linear-gradient(135deg, #8a05be, #5c0ca3);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: white;
+}
+
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ol li {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+ol li:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+ol li.expense {
+  border-left: 5px solid #ff4d4d;
+}
+
+ol li.income {
+  border-left: 5px solid #4dff88;
+}
+
+button.danger {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background-color: #6a0dad; /* roxo */
+  color: white; /* texto branco */
+  border: 2px solid white; /* contorno branco */
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  display: none;
+  white-space: nowrap; /* evita quebra de linha */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: auto; /* largura só do conteúdo */
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+button.danger:hover {
+  background-color: #e60000; /* vermelho escuro no hover */
+  border-color: #e60000; /* contorno acompanha */
+}
+
+ol li:hover button.danger {
+  display: block;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+}
+#transactions {
+  margin-top: 30px; /* ou mais, ajuste a gosto */
+}
+#graficoPizza {
+  width: 250px !important; /* ajuste para 50% menor (pode ajustar se quiser) */
+  height: 250px !important;
+  margin: auto;
+}
+
+.grafico-legend-ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.grafico-legend-ul li {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.grafico-legend-ul span {
+  margin-right: 5px;
+}

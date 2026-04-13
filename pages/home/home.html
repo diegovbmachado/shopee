@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt br">
   <head>
     <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
       <button type="button" class="clear" onclick="logout()">Sair</button>
     </header>
 
-    <!-- Filtro de mês e ano centralizado -->
+    <!-- teste aleatorio  Filtro de mês e ano centralizado -->
     <div class="centralize">
       <form style="max-width: 300px; width: 100%">
         <div class="form-field">
@@ -60,11 +60,17 @@
     <div style="max-width: 500px; margin: 20px auto">
       <canvas id="graficoPizza"></canvas>
     </div>
-    <div id="resumo-total" style="margin-top: 20px; font-size: 18px;">
-  <p><strong>Total de Receitas:</strong> <span id="total-income">R$ 0,00</span></p>
-  <p><strong>Total de Despesas:</strong> <span id="total-expense">R$ 0,00</span></p>
-  <p><strong>Saldo:</strong> <span id="saldo-total">R$ 0,00</span></p>
-</div>
+    <div id="resumo-total" style="margin-top: 20px; font-size: 18px">
+      <p>
+        <strong>Total de Receitas:</strong>
+        <span id="total-income">R$ 0,00</span>
+      </p>
+      <p>
+        <strong>Total de Despesas:</strong>
+        <span id="total-expense">R$ 0,00</span>
+      </p>
+      <p><strong>Saldo:</strong> <span id="saldo-total">R$ 0,00</span></p>
+    </div>
     <ol id="transactions"></ol>
     <button class="fab fixed bottom right" onclick="newTransaction()">+</button>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
